@@ -12,7 +12,7 @@ public class Main {
         if (numeroPrimo(numero)){
             System.out.println(numero+" es un número primo");
         } else{
-        System.out.println(numero+" no es un número primo");}
+            System.out.println(numero+" no es un número primo");}
     }
 
     public static boolean numeroPrimo(int numero) {

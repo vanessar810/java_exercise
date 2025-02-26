@@ -10,6 +10,21 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/2.2.Funciones.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2.2.Funciones/untitled/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/vaner/Documents/CertifiedTechDeveloper/Java_exercise/2.1.FichaInformativa",
-    "onboarding.tips.debug.path": "C:/Users/vaner/Documents/CertifiedTechDeveloper/Java_exercise/POO1/FichaInformativa/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vaner/Documents/CertifiedTechDeveloper/Java_exercise/2.1.FichaInformativa&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/vaner/Documents/CertifiedTechDeveloper/Java_exercise/POO1/FichaInformativa/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FichaPersonal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.FichaPersonal" />
