@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0996af18-436b-4dd7-b70a-54a5edd830bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../2.1.FichaInformativa/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2.1.FichaInformativa/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2.1.FichaInformativa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2.1.FichaInformativa/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/2.2.Funciones.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java" beforeDir="false" />
-    </list>
+    <list default="true" id="0996af18-436b-4dd7-b70a-54a5edd830bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
