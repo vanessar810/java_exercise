@@ -1,5 +1,5 @@
 public abstract class Cuenta {
-    protected int numeroCuenta;
+    private int numeroCuenta;
     protected double saldo;
     private Cliente cliente;
 

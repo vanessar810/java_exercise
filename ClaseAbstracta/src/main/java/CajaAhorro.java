@@ -8,20 +8,20 @@ public class CajaAhorro extends Cuenta{
 
        @Override
     public String Depositar(double monto) {
-        saldo=+ monto;
+        saldo+= monto;
         return "se ha depositado "+monto;
     }
     @Override
     public String ExtraerDinero(double monto) {
-        if (monto<saldo){
+        if (monto>saldo){
             return "no se puede extraer dinero";
         }
-        saldo=- monto;
+        saldo-= monto;
         return "retiro exitoso";
     }
     @Override
     public String InformarSaldo() {
-        return "su saldo es"+ saldo;
+        return "su saldo es "+ saldo;
     }
 
     public String CobrarInteres(){
