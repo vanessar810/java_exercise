@@ -13,5 +13,7 @@ public class Prueba {
         System.out.println(cuentaCorriente1.Depositar(300));
         System.out.println(cuentaCorriente1.InformarSaldo());
         System.out.println(cuentaCorriente1.ExtraerDinero(200));
+        System.out.println(cuentaCorriente1.gravar(10));
+        System.out.println(cuentaCorriente1.InformarSaldo());
     }
 }

@@ -1,4 +1,4 @@
-public class CuentaCorriente extends Cuenta{
+public class CuentaCorriente extends Cuenta implements GravarImpiesto{
  private static double descubierto = 2000;
 
     public CuentaCorriente(int numeroCuenta, double saldo, Cliente cliente) {
@@ -27,5 +27,12 @@ public class CuentaCorriente extends Cuenta{
     @Override
     public String InformarSaldo() {
         return "su saldo es "+ saldo;
+    }
+
+    @Override
+    public double gravar(double porcentaje) {
+        double impuesto = saldo*porcentaje/100;
+        saldo-=impuesto;
+        return impuesto;
     }
 }
