@@ -17,5 +17,7 @@ public class Main {
         puerto1.agregarContenedor(contenedor6);
         puerto1.mostrarContenedores();
         puerto1.contenedorPeligrosoDesconocido();
+      System.out.println("la cantidad de contenedores con material peligroso y origen desconocido es:"
+      +puerto1.cantidadPeligrosoDesconocido());;
     }
 }

@@ -22,4 +22,8 @@ public class Puerto {
       contenedors.stream().filter(Contenedor::isMaterialesPeligrosos).filter(Contenedor-> Contenedor.getPaisProcedencia()=="Desconocido")
               .forEach(contenedor -> System.out.println(contenedor.getIdentificacion()));
     }
+    public int cantidadPeligrosoDesconocido(){
+        return (int)  contenedors.stream().filter(Contenedor::isMaterialesPeligrosos).filter(Contenedor-> Contenedor.getPaisProcedencia()=="Desconocido")
+                .count();
+    }
 }
