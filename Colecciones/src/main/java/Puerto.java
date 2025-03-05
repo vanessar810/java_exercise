@@ -17,5 +17,9 @@ public class Puerto {
         System.out.println("Lista de contenedores: ");
         contenedors.stream().sorted().forEach(contenedor -> System.out.println(contenedor.getIdentificacion() + " from: " + contenedor.getPaisProcedencia()));
     }
-
+    public void contenedorPeligrosoDesconocido(){
+        System.out.println("Lista de contenedores peligrosos: ");
+      contenedors.stream().filter(Contenedor::isMaterialesPeligrosos).filter(Contenedor-> Contenedor.getPaisProcedencia()=="Desconocido")
+              .forEach(contenedor -> System.out.println(contenedor.getIdentificacion()));
+    }
 }
