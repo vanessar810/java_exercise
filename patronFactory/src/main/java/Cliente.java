@@ -6,6 +6,8 @@ public class Cliente {
         System.out.println(product2.calcularEspacio());
         Product product3 =ProductFactory.CrearProducto("PELOTATENIS");
         System.out.println(product3.calcularEspacio());
+        //ProductFactory.CrearProducto("algo diferente");
+
 
         System.out.println("Total de productos creados: " + Product.getProductosCreados().size());
         System.out.println("Espacio total ocupado: " + Product.calcularEspacioTotal()+" cm3");

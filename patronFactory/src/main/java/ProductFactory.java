@@ -7,7 +7,7 @@ public static  Product CrearProducto(String descripcion){
     } else if ("PELOTATENIS".equalsIgnoreCase(descripcion)) {
 return new Pelota(0.32);
     } else {
-        throw new IllegalArgumentException("producto no valido");
+        throw new IllegalArgumentException("tipo de producto no valido");
     }
 }
 
