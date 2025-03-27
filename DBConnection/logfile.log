@@ -1,0 +1,35 @@
+[2025-03-26 20:15:58] [ INFO ] [Main:26] Figura: 1 - Circulo - rojo
+[2025-03-26 20:15:58] [ INFO ] [Main:26] Figura: 2 - Circulo - azul
+[2025-03-26 20:15:58] [ INFO ] [Main:26] Figura: 3 - Cuadro - rojo
+[2025-03-26 20:15:58] [ INFO ] [Main:26] Figura: 4 - Cuadro - azul
+[2025-03-26 20:15:58] [ INFO ] [Main:26] Figura: 5 - Cuadro - amarillo
+[2025-03-26 20:18:59] [ INFO ] [Main:26] Figura: 1 - Circulo - rojo
+[2025-03-26 20:18:59] [ INFO ] [Main:26] Figura: 2 - Circulo - azul
+[2025-03-26 20:18:59] [ INFO ] [Main:26] Figura: 3 - Cuadro - rojo
+[2025-03-26 20:18:59] [ INFO ] [Main:26] Figura: 4 - Cuadro - azul
+[2025-03-26 20:18:59] [ INFO ] [Main:26] Figura: 5 - Cuadro - amarillo
+[2025-03-26 20:18:59] [ INFO ] [Main:28] ------------------------------------------------------------
+[2025-03-26 20:19:52] [ INFO ] [Main:26] Figura: 1 - Circulo - rojo
+[2025-03-26 20:19:52] [ INFO ] [Main:26] Figura: 2 - Circulo - azul
+[2025-03-26 20:19:52] [ INFO ] [Main:26] Figura: 3 - Cuadro - rojo
+[2025-03-26 20:19:52] [ INFO ] [Main:26] Figura: 4 - Cuadro - azul
+[2025-03-26 20:19:52] [ INFO ] [Main:26] Figura: 5 - Cuadro - amarillo
+[2025-03-26 20:19:52] [ INFO ] [Main:28] ------------------------------------------------------------
+[2025-03-26 20:28:36] [ INFO ] [Main:26] Figura: 1 - Circulo - rojo
+[2025-03-26 20:28:36] [ INFO ] [Main:26] Figura: 2 - Circulo - azul
+[2025-03-26 20:28:36] [ INFO ] [Main:26] Figura: 3 - Cuadro - rojo
+[2025-03-26 20:28:36] [ INFO ] [Main:26] Figura: 4 - Cuadro - azul
+[2025-03-26 20:28:36] [ INFO ] [Main:26] Figura: 5 - Cuadro - amarillo
+[2025-03-26 20:28:36] [ INFO ] [Main:28] ------------------------------------------------------------
+[2025-03-26 20:32:01] [ ERROR] [Main:39] El objeto ya está cerrado
+The object is already closed [90007-224]
+[2025-03-26 20:33:31] [ ERROR] [Main:39] El objeto ya está cerrado
+The object is already closed [90007-224]
+[2025-03-26 20:39:00] [ INFO ] [Main:28] Figura: 1 - Circulo - rojo
+[2025-03-26 20:39:00] [ INFO ] [Main:28] Figura: 2 - Circulo - azul
+[2025-03-26 20:39:00] [ INFO ] [Main:28] Figura: 3 - Cuadro - rojo
+[2025-03-26 20:39:00] [ INFO ] [Main:28] Figura: 4 - Cuadro - azul
+[2025-03-26 20:39:00] [ INFO ] [Main:28] Figura: 5 - Cuadro - amarillo
+[2025-03-26 20:39:00] [ INFO ] [Main:31] ------------------------------------------------------------
+[2025-03-26 20:39:00] [ INFO ] [Main:34] Figura: 1 - Circulo - rojo
+[2025-03-26 20:39:00] [ INFO ] [Main:34] Figura: 3 - Cuadro - rojo
