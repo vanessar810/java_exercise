@@ -1,0 +1,19 @@
+[2025-04-02 12:12:01] [ ERROR] [Main:86] Error de Sintaxis en sentencia SQL "Create [*]tabla Cuentas(id int auto_increment primary key, nrocuenta int not null,nombre varchar(50) not null, saldo numeric(7,2) not null)"; se esperaba "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"
+Syntax error in SQL statement "Create [*]tabla Cuentas(id int auto_increment primary key, nrocuenta int not null,nombre varchar(50) not null, saldo numeric(7,2) not null)"; expected "OR REPLACE, FORCE, VIEW, MATERIALIZED, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMPORARY, TABLE, SYNONYM, UNIQUE, SPATIAL, INDEX"; SQL statement:
+Create tabla Cuentas(id int auto_increment primary key, nrocuenta int not null,nombre varchar(50) not null, saldo numeric(7,2) not null) [42001-224]
+[2025-04-02 12:14:00] [ INFO ] [Main:42] Información cuenta: null
+[2025-04-02 12:14:00] [ INFO ] [Main:58] Información cuenta: null
+[2025-04-02 12:14:00] [ ERROR] [Main:71] / by zero
+[2025-04-02 12:14:00] [ INFO ] [Main:83] Información cuenta: null
+[2025-04-02 12:32:23] [ INFO ] [Main:42] Información cuenta: null
+[2025-04-02 12:32:23] [ INFO ] [Main:58] Información cuenta: null
+[2025-04-02 12:32:23] [ ERROR] [Main:71] / by zero
+[2025-04-02 12:32:23] [ INFO ] [Main:83] Información cuenta: null
+[2025-04-02 12:42:30] [ INFO ] [Main:43] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0
+[2025-04-02 12:42:30] [ INFO ] [Main:59] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0
+[2025-04-02 12:42:30] [ ERROR] [Main:72] / by zero
+[2025-04-02 12:42:30] [ INFO ] [Main:84] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0
+[2025-04-03 12:11:13] [ INFO ] [Main:43] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0
+[2025-04-03 12:11:13] [ INFO ] [Main:59] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0
+[2025-04-03 12:11:13] [ ERROR] [Main:72] / by zero
+[2025-04-03 12:11:13] [ INFO ] [Main:84] Información cuenta: Cuenta nroCuenta=1012, nombre='Sara', saldo=5000.0

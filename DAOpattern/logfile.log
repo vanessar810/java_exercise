@@ -1,0 +1,63 @@
+[2025-04-03 11:48:38] [ ERROR] [MedicamentosServiceTest:28] org.h2.Driver
+[2025-04-03 11:52:56] [ ERROR] [MedicamentosServiceTest:28] IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-224]
+[2025-04-03 11:55:00] [ ERROR] [MedicamentosServiceTest:28] IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-224]
+[2025-04-03 12:00:14] [ ERROR] [MedicamentosServiceTest:28] IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-224]
+[2025-04-03 12:03:51] [ ERROR] [MedicamentosServiceTest:28] Nombre de usuario ó password incorrecto
+Wrong user name or password [28000-224]
+[2025-04-03 12:06:59] [ ERROR] [MedicamentosServiceTest:28] Parametro de conexión No soportado " INIT"
+Unsupported connection setting " INIT" [90113-224]
+[2025-04-03 12:07:36] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 12:07:36] [ ERROR] [MedicamentoIDaoImpl:148] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines [42104-224]
+[2025-04-03 12:07:36] [ ERROR] [MedicamentoIDaoImpl:52] Table "MEDICINES" not found (this database is empty); SQL statement:
+insert into Medicines values (default, ?,?,?,?,?) [42104-224]
+[2025-04-03 12:07:36] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 12:58:02] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 12:58:02] [ ERROR] [MedicamentoIDaoImpl:148] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines [42104-224]
+[2025-04-03 12:58:02] [ ERROR] [MedicamentoIDaoImpl:52] Table "MEDICINES" not found (this database is empty); SQL statement:
+insert into Medicines values (default, ?,?,?,?,?) [42104-224]
+[2025-04-03 12:58:02] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 12:59:49] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 12:59:49] [ ERROR] [MedicamentoIDaoImpl:148] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines [42104-224]
+[2025-04-03 12:59:49] [ ERROR] [MedicamentoIDaoImpl:52] Table "MEDICINES" not found (this database is empty); SQL statement:
+insert into Medicines values (default, ?,?,?,?,?) [42104-224]
+[2025-04-03 12:59:49] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 13:00:26] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 13:00:26] [ ERROR] [MedicamentoIDaoImpl:148] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines [42104-224]
+[2025-04-03 13:00:26] [ ERROR] [MedicamentoIDaoImpl:52] Table "MEDICINES" not found (this database is empty); SQL statement:
+insert into Medicines values (default, ?,?,?,?,?) [42104-224]
+[2025-04-03 13:00:26] [ ERROR] [MedicamentoIDaoImpl:85] Table "MEDICINES" not found (this database is empty); SQL statement:
+select * from Medicines where nombre=? [42104-224]
+[2025-04-03 13:01:50] [ ERROR] [MedicamentosServiceTest:28] Tabla "MEDICAMENTOS" no encontrada
+Table "MEDICAMENTOS" not found; SQL statement:
+
+
+INSERT INTO MEDICAMENTOS
+VALUES (DEFAULT, 567, 'IBUPROFENO','PFIZER', 12, 3500),
+(DEFAULT, 859, 'PARACETAMOL','PFIZER', 10, 3000) [42102-224]
+[2025-04-03 13:04:06] [ INFO ] [MedicamentoIDaoImpl:83] el medicamento encontrado es: Medicamentos{id=1, codigo=567, nombre='IBUPROFENO', laboratorio='PFIZER', cantidad=12, precio=3500.0}
+[2025-04-03 13:04:06] [ INFO ] [MedicamentoIDaoImpl:144] Medicamentos: Medicamentos{id=1, codigo=567, nombre='IBUPROFENO', laboratorio='PFIZER', cantidad=12, precio=3500.0}
+[2025-04-03 13:04:06] [ INFO ] [MedicamentoIDaoImpl:144] Medicamentos: Medicamentos{id=2, codigo=859, nombre='PARACETAMOL', laboratorio='PFIZER', cantidad=10, precio=3000.0}
+[2025-04-03 13:04:06] [ INFO ] [MedicamentoIDaoImpl:41] Medicamento creado: Medicamentos{id=3, codigo=1234, nombre='ASPIRINA', laboratorio='BAGO', cantidad=30, precio=10.0}
+[2025-04-03 13:04:06] [ INFO ] [MedicamentoIDaoImpl:83] el medicamento encontrado es: null
+[2025-04-03 13:05:26] [ INFO ] [MedicamentoIDaoImpl:83] el medicamento encontrado es: Medicamentos{id=1, codigo=567, nombre='IBUPROFENO', laboratorio='PFIZER', cantidad=12, precio=3500.0}
+[2025-04-03 13:05:26] [ INFO ] [MedicamentoIDaoImpl:144] Medicamentos: Medicamentos{id=1, codigo=567, nombre='IBUPROFENO', laboratorio='PFIZER', cantidad=12, precio=3500.0}
+[2025-04-03 13:05:26] [ INFO ] [MedicamentoIDaoImpl:144] Medicamentos: Medicamentos{id=2, codigo=859, nombre='PARACETAMOL', laboratorio='PFIZER', cantidad=10, precio=3000.0}
+[2025-04-03 13:05:26] [ INFO ] [MedicamentoIDaoImpl:41] Medicamento creado: Medicamentos{id=3, codigo=1234, nombre='ASPIRINA', laboratorio='BAGO', cantidad=30, precio=10.0}
+[2025-04-03 13:05:26] [ INFO ] [MedicamentoIDaoImpl:83] el medicamento encontrado es: null
