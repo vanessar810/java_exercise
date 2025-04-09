@@ -1,0 +1,75 @@
+[2025-04-08 21:04:24] [ ERROR] [PatientServiceTest:29] Access denied for user ''@'localhost' (using password: NO)
+[2025-04-08 21:08:36] [ ERROR] [PatientServiceTest:29] Unknown database 'mi_base_de_datos;init=runscript from 'create.sql''
+[2025-04-08 21:15:10] [ ERROR] [PatientServiceTest:29] Unknown database 'mi_base_de_datos; init=runscript from 'create.sql''
+[2025-04-08 21:17:15] [ ERROR] [PatientServiceTest:29] Unknown database 'db_clinic_0408; init=runscript from 'create.sql''
+[2025-04-08 21:25:46] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:25:46] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:27:36] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:27:36] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:27:45] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:27:45] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:31:22] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:31:22] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:34:19] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:34:19] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:36:05] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:36:05] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:37:46] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:37:46] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:38:03] [ ERROR] [PatientServiceTest:36] Unknown database 'db_clinic_0408'
+[2025-04-08 21:38:03] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:40:35] [ ERROR] [PatientServiceTest:36] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use db_clinic_0408;
+
+drop table if exists addresses;
+create table addresses (' at line 2
+[2025-04-08 21:40:35] [ INFO ] [PatientIDao:53] Unknown database 'db_clinic_0408'
+[2025-04-08 21:40:44] [ ERROR] [PatientServiceTest:36] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use db_clinic_0408;
+
+drop table if exists addresses;
+create table addresses (' at line 2
+[2025-04-08 21:40:44] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 21:40:44] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 21:47:03] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 21:47:03] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:23:41] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:23:41] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:32:51] [ ERROR] [PatientServiceTest:46] src\com\dentalclinic\test\create.sql
+[2025-04-08 22:32:52] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:32:53] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:33:15] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:33:15] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:34:34] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:34:34] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:38:56] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:38:56] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:40:02] [ ERROR] [PatientServiceTest:47] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 8
+[2025-04-08 22:40:02] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:40:02] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:40:13] [ ERROR] [PatientServiceTest:47] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 8
+[2025-04-08 22:40:14] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:40:14] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:40:57] [ INFO ] [AddressIDao:46] No database selected
+[2025-04-08 22:40:57] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-08 22:45:02] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain:
+[2025-04-08 22:45:02] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain:
+[2025-04-08 22:47:28] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:47:28] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:48:48] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:48:48] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:52:54] [ INFO ] [PatientIDao:86] Patient found: null
+[2025-04-08 22:53:42] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:53:42] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:53:42] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 22:53:42] [ INFO ] [PatientIDao:86] Patient found: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:01] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:01] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:01] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:01] [ INFO ] [PatientIDao:86] Patient found: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:01] [ INFO ] [AddressIDao:33] persisted patient: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-08 23:01:01] [ INFO ] [PatientIDao:40] Patient saved: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-08 23:01:02] [ INFO ] [AddressIDao:75] Found address: Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-08 23:01:02] [ INFO ] [PatientIDao:127] Patient List: Patientid=1, name='peter', lastname='Bernard', dni='151413', inDate=2024-12-14, address=Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-08 23:01:02] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:02] [ INFO ] [PatientIDao:127] Patient List: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-08 23:01:02] [ INFO ] [AddressIDao:75] Found address: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-08 23:01:02] [ INFO ] [PatientIDao:127] Patient List: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
