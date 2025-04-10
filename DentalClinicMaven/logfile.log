@@ -1,0 +1,45 @@
+[2025-04-09 10:09:21] [ ERROR] [PatientServiceTest:48] src\com\dentalclinic\test\resources\create.sql
+[2025-04-09 10:09:21] [ INFO ] [AddressIDao:46] Table 'db_clinic_0409.addresses' doesn't exist
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:92] Can't call rollback when autocommit=true
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:96] Table 'db_clinic_0409.patients' doesn't exist
+[2025-04-09 10:09:21] [ INFO ] [AddressIDao:46] Table 'db_clinic_0409.addresses' doesn't exist
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:53] Cannot invoke "com.dentalclinic.model.Address.getId()" because "addressSaved" is null
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:135] Can't call rollback when autocommit=true
+[2025-04-09 10:09:21] [ INFO ] [PatientIDao:139] Table 'db_clinic_0409.patients' doesn't exist
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:86] Patient found: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:33] persisted patient: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:40] Patient saved: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:75] Found address: Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=1, name='peter', lastname='Bernard', dni='151413', inDate=2024-12-14, address=Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:10:39] [ INFO ] [AddressIDao:75] Found address: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:10:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:86] Patient found: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:33] persisted patient: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:40] Patient saved: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:75] Found address: Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:127] Patient List: Patientid=1, name='peter', lastname='Bernard', dni='151413', inDate=2024-12-14, address=Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:127] Patient List: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:14:54] [ INFO ] [AddressIDao:75] Found address: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:14:54] [ INFO ] [PatientIDao:127] Patient List: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:33] persisted patient: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:40] Patient saved: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:86] Patient found: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:33] persisted patient: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:40] Patient saved: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:75] Found address: Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=1, name='peter', lastname='Bernard', dni='151413', inDate=2024-12-14, address=Addressid=1, street='rue morge', number=165, neighborhood='Le Marais
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:75] Found address: Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=2, name='Émile', lastname='Dubois', dni='10111514', inDate=2024-10-30, address=Addressid=2, street='S. Benoit', number=15, neighborhood='Saint-Germain
+[2025-04-09 10:16:39] [ INFO ] [AddressIDao:75] Found address: Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
+[2025-04-09 10:16:39] [ INFO ] [PatientIDao:127] Patient List: Patientid=3, name='Alphonse', lastname='Dupont', dni='121212', inDate=2025-04-07, address=Addressid=3, street=' Trois Frères', number=58, neighborhood='Montmartre
