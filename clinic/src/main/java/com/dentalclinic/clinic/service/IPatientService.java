@@ -8,4 +8,6 @@ public interface IPatientService {
      Patient createPatient(Patient patient);
      Patient readId(Integer id);
      List<Patient> readAll();
+     void update(Patient patient);
+     void delete(Integer id);
 }

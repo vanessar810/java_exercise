@@ -6,6 +6,9 @@ public class Odontologist {
     private String lastname;
     private String license;
 
+    public Odontologist() {
+    }
+
     public Odontologist(String name, String lastname, String license) {
         this.name = name;
         this.lastname = lastname;
@@ -13,7 +16,7 @@ public class Odontologist {
     }
 
     public Odontologist(Integer id, String name, String lastname, String license) {
-        id = id;
+        this.id = id;
         this.name = name;
         this.lastname = lastname;
         this.license = license;

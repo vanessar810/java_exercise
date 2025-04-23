@@ -10,6 +10,9 @@ public class Patient {
     private LocalDate inDate;
     private Address address;
 
+    public Patient() {
+    }
+
     public Patient(String name, String lastname, String dni, LocalDate inDate, Address address) {
         this.name = name;
         this.lastname = lastname;
@@ -54,6 +57,7 @@ public class Patient {
     public Address getAddress() {
         return address;
     }
+
 
     @Override
     public String toString() {

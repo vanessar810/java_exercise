@@ -1,7 +1,6 @@
 package com.dentalclinic.clinic.controller;
 
 import com.dentalclinic.clinic.model.Odontologist;
-import com.dentalclinic.clinic.model.Patient;
 import com.dentalclinic.clinic.service.IOdontologistService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +14,7 @@ public class OdontologistController {
     public OdontologistController(IOdontologistService odontologistService) {
         this.odontologistService = odontologistService;
     }
+
     @GetMapping("/search")
     public  String serachId(Model model, @RequestParam Integer id){
         Odontologist odontologist = odontologistService.readId(id);

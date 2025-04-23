@@ -13,6 +13,8 @@ public class AddressIDao implements IDao<Address> {
     private static Logger logger = LoggerFactory.getLogger(AddressIDao.class);
     private static String SQL_INSERT = "insert into addresses values (default,?,?,?)";
     private static String SQL_SELECT_ID = "select * from addresses where id = ?";
+    public static final String SQL_UPDATE = "update addresses set street = ?, number = ?, neighborhood = ? where id=?";
+    public static final String SQL_DELETE = "delete from addresses where id =?";
 
     @Override
     public Address create(Address address) {
@@ -92,5 +94,78 @@ logger.info("Found address: "+address1);
     @Override
     public List<Address> readAll() {
         return null;
+    }
+
+    @Override
+    public void update(Address address) {
+        Connection connection = null;
+        try {
+            connection = MySQLConnection.getConnection();
+            connection.setAutoCommit(false);
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_UPDATE);
+            preparedStatement.setString(1,address.getStreet());
+            preparedStatement.setInt(2,address.getNumber());
+            preparedStatement.setString(3,address.getNeighborhood());
+            preparedStatement.setInt(4,address.getId());
+            preparedStatement.executeUpdate();
+
+            logger.info("updated patient address:");
+            connection.commit();
+            connection.setAutoCommit(true);
+
+        } catch (Exception e){
+            if(connection!=null){
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    logger.info(ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }
+            logger.info(e.getMessage());
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.info(e.getMessage());
+                e.printStackTrace();
+            }
+    }}
+
+    @Override
+    public void delete(Integer id) {
+        Connection connection = null;
+        try {
+            connection = MySQLConnection.getConnection();
+            connection.setAutoCommit(false);
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_DELETE);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+
+            logger.info("deleted patient address");
+            connection.commit();
+            connection.setAutoCommit(true);
+
+        } catch (Exception e){
+            if(connection!=null){
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    logger.info(ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }
+            logger.info(e.getMessage());
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.info(e.getMessage());
+                e.printStackTrace();
+            }
+
+     }
     }
 }

@@ -1,56 +1,20 @@
 package com.dentalclinic.clinic.service;
 
-import com.dentalclinic.clinic.dao.Impl.OdontologistIDao;
 import com.dentalclinic.clinic.dao.Impl.PatientIDao;
 import com.dentalclinic.clinic.model.Address;
-import com.dentalclinic.clinic.model.Odontologist;
 import com.dentalclinic.clinic.model.Patient;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class PatientServiceTest {
-    private static Logger logger = LoggerFactory.getLogger(PatientServiceTest.class);
+class PatientServiceTest extends DBTestConfig{
     private static PatientService patientService= new PatientService(new PatientIDao());
-    @BeforeAll
-    static void createTables() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
-                 Statement stmt = conn.createStatement()) {
-                stmt.execute("CREATE DATABASE IF NOT EXISTS db_clinic_250409");
-            }
-            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_clinic_250409", "root", "root");
-                 Statement stmt = conn.createStatement()) {
-                String sql = new String(Files.readAllBytes(Paths.get("create.sql")));
-                String[] sqlStatements = sql.split(";");
-                for (String statement : sqlStatements) {
-                    statement = statement.trim();
-                    if (!statement.isEmpty() && !statement.toLowerCase().startsWith("create database") && !statement.toLowerCase().startsWith("use")) {
-                        System.out.println("executing: " + statement);
-                        stmt.execute(statement);
-                    }
-                }
-            }
 
-        }  catch (Exception e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-        }
-    }
     @Test
     @DisplayName("Create patient in DB")
     void testPatientInDB(){

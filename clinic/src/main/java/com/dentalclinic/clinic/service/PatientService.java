@@ -21,4 +21,15 @@ public class PatientService implements IPatientService{
     public List<Patient> readAll(){
         return patientIDao.readAll();
     }
+
+    @Override
+    public void update(Patient patient) {
+        patientIDao.update(patient);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        patientIDao.delete(id);
+    }
+
 }

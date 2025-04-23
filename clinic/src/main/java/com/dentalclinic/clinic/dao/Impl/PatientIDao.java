@@ -18,6 +18,8 @@ public class PatientIDao implements IDao<Patient> {
     private static String SQL_INSERT = "insert into patients values (default,?,?,?,?,?)";
     private static String SQL_SELECT_ID = "select * from patients where id = ?";
     public static String SQL_SELECT_ALL = "select * from patients";
+    public static final String SQL_UPDATE = "update patients set name = ?, lastname = ?, dni = ?, inDate = ?, id_address=? where id=?";
+    public static final String SQL_DELETE = "delete from patients where id =?";
     @Override
     public Patient create(Patient patient) {
         Connection connection = null;
@@ -151,4 +153,82 @@ public class PatientIDao implements IDao<Patient> {
 
         return patients;
     }
-}
+
+    @Override
+    public void update(Patient patient) {
+        Connection connection = null;
+        AddressIDao addressIDao = new AddressIDao();
+        try {
+            connection = MySQLConnection.getConnection();
+            connection.setAutoCommit(false);
+            addressIDao.update(patient.getAddress());
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_UPDATE);
+            preparedStatement.setString(1,patient.getName());
+            preparedStatement.setString(2,patient.getLastname());
+            preparedStatement.setString(3,patient.getDni());
+            preparedStatement.setDate(4, Date.valueOf(patient.getInDate()));
+            preparedStatement.setInt(5,patient.getAddress().getId());
+            preparedStatement.setInt(6,patient.getId());
+            preparedStatement.executeUpdate();
+            logger.info("Patient updated");
+            connection.commit();
+            connection.setAutoCommit(true);
+
+        }catch (Exception e){
+            if(connection!=null){
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    logger.info(ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }
+            logger.info(e.getMessage());
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                logger.info(e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public void delete(Integer id) {
+            Connection connection = null;
+            AddressIDao addressIDao = new AddressIDao();
+            try {
+                connection = MySQLConnection.getConnection();
+                connection.setAutoCommit(false);
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL_DELETE);
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+
+                logger.info("Patient deleted");
+                connection.commit();
+                connection.setAutoCommit(true);
+
+            } catch (Exception e) {
+                if (connection != null) {
+                    try {
+                        connection.rollback();
+                    } catch (SQLException ex) {
+                        logger.info(ex.getMessage());
+                        ex.printStackTrace();
+                    }
+                }
+                logger.info(e.getMessage());
+                e.printStackTrace();
+            } finally {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    logger.info(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
