@@ -91,6 +91,18 @@ public class AppointmentService implements IAppointmentService{
     appointmentRepository.deleteById(id);
     }
 
+    @Override
+    public List<AppointmentResponseDto> findByDates(LocalDate startDate, LocalDate endDate) {
+        List<Appointment> appointments = appointmentRepository.findByDates(startDate, endDate);
+        List<AppointmentResponseDto> appointmentsDto = new ArrayList<>();
+        AppointmentResponseDto appointmentResponseDto = null;
+        for (Appointment appointment: appointments){
+            appointmentResponseDto = mapToResponseDto(appointment);
+            appointmentsDto.add(appointmentResponseDto);
+        }
+        return appointmentsDto;
+    }
+
     private AppointmentResponseDto mapToResponseDto(Appointment appointment){
         AppointmentResponseDto appointmentResponseDto = modelMapper.map(appointment,AppointmentResponseDto.class);
         appointmentResponseDto.setOdontologist(modelMapper.map(appointment.getOdontologist(), OdontologistResponseDto.class));

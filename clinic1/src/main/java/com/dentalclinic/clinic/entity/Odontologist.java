@@ -22,6 +22,7 @@ public class Odontologist {
     private String name;
     private String lastname;
     private String license;
+
     @OneToMany(mappedBy = "odontologist", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Appointment> appointmentSet = new HashSet<>();

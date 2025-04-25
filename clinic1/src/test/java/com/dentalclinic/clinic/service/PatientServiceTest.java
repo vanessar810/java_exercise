@@ -44,7 +44,7 @@ class PatientServiceTest{
     @Test
     @DisplayName("read patient by id")
     void testPatientId(){
-        Integer id =2;
+        Integer id =1;
         Optional<Patient> patientFound = patientService.readId(id);
         Patient patient1 = patientFound.get();
         assertEquals(id,patient1.getId());

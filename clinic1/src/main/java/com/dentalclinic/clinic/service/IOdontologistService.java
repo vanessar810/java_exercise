@@ -11,4 +11,7 @@ public interface IOdontologistService {
     List<Odontologist> readAll();
     void update(Odontologist odontologist);
     void delete(Integer id);
+    // HQL methods
+    List<Odontologist> searchByLastname (String lastname);
+    List<Odontologist> findByNameLike (String name);
 }

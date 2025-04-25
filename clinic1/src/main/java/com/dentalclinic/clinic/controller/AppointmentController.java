@@ -2,12 +2,13 @@ package com.dentalclinic.clinic.controller;
 
 import com.dentalclinic.clinic.Dto.request.AppointmentRequestDto;
 import com.dentalclinic.clinic.Dto.response.AppointmentResponseDto;
-import com.dentalclinic.clinic.entity.Appointment;
 import com.dentalclinic.clinic.service.IAppointmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
@@ -15,8 +16,8 @@ import java.util.List;
 public class AppointmentController {
     private IAppointmentService appointmentService;
 
-    public AppointmentController(IAppointmentService iAppointmentService) {
-        this.appointmentService = iAppointmentService;
+    public AppointmentController(IAppointmentService appointmentService) {
+        this.appointmentService = appointmentService;
     }
 
     @PostMapping
@@ -36,5 +37,12 @@ public class AppointmentController {
     public ResponseEntity<String> updateAppointment(@PathVariable Integer id, @RequestBody AppointmentRequestDto appointment){
         appointmentService.update(id, appointment);
         return ResponseEntity.ok("Appointment updated");
+    }
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    @GetMapping("/dates")
+    public ResponseEntity<List<AppointmentResponseDto>> findDates(@RequestParam String start, @RequestParam String end){
+        LocalDate startDate = LocalDate.parse(start, formatter);
+        LocalDate endDate = LocalDate.parse(end, formatter);
+        return ResponseEntity.ok(appointmentService.findByDates(startDate,endDate));
     }
 }

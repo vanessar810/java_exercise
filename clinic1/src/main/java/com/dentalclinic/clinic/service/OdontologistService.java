@@ -38,4 +38,14 @@ public class OdontologistService implements IOdontologistService{
     public void delete(Integer id) {
         odontologistRepository.deleteById(id);
     }
+
+    @Override
+    public List<Odontologist> searchByLastname(String lastname) {
+        return odontologistRepository.searchByLastname(lastname);
+    }
+    @Override
+    public List<Odontologist> findByNameLike(String name){
+        return odontologistRepository.findByNameLike(name);
+    }
+
 }

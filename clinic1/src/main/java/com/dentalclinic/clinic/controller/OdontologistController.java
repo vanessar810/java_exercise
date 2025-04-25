@@ -56,4 +56,15 @@ public class OdontologistController {
     public ResponseEntity<List<Odontologist>> searchAll(){
         return ResponseEntity.ok(odontologistService.readAll());
     }
+
+    @GetMapping("/lastname/{lastname}")
+    public ResponseEntity<List<Odontologist>> searchByLastname(@PathVariable String lastname){
+        return ResponseEntity.ok(odontologistService.searchByLastname(lastname));
+    }
+    @GetMapping("/name/{name}")
+    public ResponseEntity<List<Odontologist>> findByNameLike(@PathVariable String name){
+        return ResponseEntity.ok(odontologistService.findByNameLike(name));
+    }
+
+
 }
