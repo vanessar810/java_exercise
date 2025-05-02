@@ -1,4 +1,4 @@
-package dh.backend.clinica.utils;
+package com.dentalclinic.clinic.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

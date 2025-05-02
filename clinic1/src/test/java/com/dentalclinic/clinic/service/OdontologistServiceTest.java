@@ -1,6 +1,7 @@
 package com.dentalclinic.clinic.service;
 
 import com.dentalclinic.clinic.entity.Odontologist;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -35,7 +36,7 @@ private Odontologist odontologist;
     }
     @Test
     @DisplayName("read odont by Id")
-    void testOdontId(){
+    void testOdontId() throws ResourceNotFoundException {
      Integer id =1;
      Optional<Odontologist> odontFound = odontologistService.readId(id);
      Odontologist odontologist1 = odontFound.get();

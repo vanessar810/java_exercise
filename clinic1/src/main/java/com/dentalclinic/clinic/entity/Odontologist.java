@@ -26,4 +26,10 @@ public class Odontologist {
     @OneToMany(mappedBy = "odontologist", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Appointment> appointmentSet = new HashSet<>();
+
+    @ManyToMany
+        @JoinTable(name="specialities_odontologist",
+                joinColumns = @JoinColumn(name = "odontologist_id"),
+                inverseJoinColumns = @JoinColumn(name = "speciality_id"))
+    Set<Speciality> specialities = new HashSet<>();
 }

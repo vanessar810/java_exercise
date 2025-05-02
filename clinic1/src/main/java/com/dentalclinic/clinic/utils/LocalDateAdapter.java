@@ -1,4 +1,4 @@
-package dh.backend.clinica.utils;
+package com.dentalclinic.clinic.utils;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;

@@ -2,6 +2,7 @@ package com.dentalclinic.clinic.controller;
 
 import com.dentalclinic.clinic.Dto.request.AppointmentRequestDto;
 import com.dentalclinic.clinic.Dto.response.AppointmentResponseDto;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import com.dentalclinic.clinic.service.IAppointmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class AppointmentController {
     @PutMapping("/{id}")
     public ResponseEntity<String> updateAppointment(@PathVariable Integer id, @RequestBody AppointmentRequestDto appointment){
         appointmentService.update(id, appointment);
-        return ResponseEntity.ok("Appointment updated");
+        return ResponseEntity.ok("{\"message\":\"Appointment updated\"}");
     }
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     @GetMapping("/dates")
@@ -44,5 +45,10 @@ public class AppointmentController {
         LocalDate startDate = LocalDate.parse(start, formatter);
         LocalDate endDate = LocalDate.parse(end, formatter);
         return ResponseEntity.ok(appointmentService.findByDates(startDate,endDate));
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteAppointment(@PathVariable Integer id) throws ResourceNotFoundException{
+        appointmentService.delete(id);
+        return ResponseEntity.ok("{\"message\":\"appointment deleted\"}");
     }
 }

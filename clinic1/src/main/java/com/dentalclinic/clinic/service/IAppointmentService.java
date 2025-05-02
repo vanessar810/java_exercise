@@ -3,6 +3,7 @@ package com.dentalclinic.clinic.service;
 import com.dentalclinic.clinic.Dto.request.AppointmentRequestDto;
 import com.dentalclinic.clinic.Dto.response.AppointmentResponseDto;
 import com.dentalclinic.clinic.entity.Appointment;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 
 
 import java.time.LocalDate;
@@ -13,7 +14,7 @@ public interface IAppointmentService {
     AppointmentResponseDto readId(Integer id);
     List<AppointmentResponseDto> readAll();
     void update(Integer id,AppointmentRequestDto appointmentRequestDto);
-    void delete(Integer id);
+    void delete (Integer id)  throws ResourceNotFoundException;
     //HQL
     List<AppointmentResponseDto> findByDates(LocalDate startDate, LocalDate endDate);
 

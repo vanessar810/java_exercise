@@ -1,6 +1,7 @@
 package com.dentalclinic.clinic.controller;
 
 import com.dentalclinic.clinic.entity.Odontologist;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import com.dentalclinic.clinic.service.IOdontologistService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,38 +20,28 @@ public class OdontologistController {
     public OdontologistController(IOdontologistService odontologistService) {
         this.odontologistService = odontologistService;
     }
+
     @PostMapping
-    public ResponseEntity<Odontologist> createOdontologist(@RequestBody Odontologist odontologist){
+    public ResponseEntity<Odontologist> createOdontologist(@RequestBody Odontologist odontologist) {
         return ResponseEntity.status(HttpStatus.CREATED).body(odontologistService.createOdontologist(odontologist));
     }
+
     @PutMapping
-    public ResponseEntity<String> updateOdontologist(@RequestBody Odontologist odontologist){
+    public ResponseEntity<String> updateOdontologist(@RequestBody Odontologist odontologist) throws ResourceNotFoundException {
         Optional<Odontologist> odontologist1 = odontologistService.readId(odontologist.getId());
-        if(odontologist1.isPresent()){
-            odontologistService.update(odontologist);
             return ResponseEntity.ok("{\"message\":\"odontologist updated\"}");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologist> serachId(@PathVariable Integer id){
+    public ResponseEntity<Odontologist> serachId(@PathVariable Integer id) throws ResourceNotFoundException{
         Optional<Odontologist> odontologist = odontologistService.readId(id);
-        if (odontologist.isPresent()){
-            Odontologist odontologist1 = odontologist.get();
-            return ResponseEntity.ok(odontologist1);
-        } else
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            return ResponseEntity.ok(odontologist.get());
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteOdontologist(@PathVariable Integer id){
-        Optional<Odontologist> odontologist = odontologistService.readId(id);
-        if (odontologist.isPresent()){
+    public ResponseEntity<String> deleteOdontologist(@PathVariable Integer id) throws ResourceNotFoundException {
             odontologistService.delete(id);
             return ResponseEntity.ok("{\"message\":\"odontologist deleted\"}");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
     }
     @GetMapping
     public ResponseEntity<List<Odontologist>> searchAll(){
@@ -58,13 +49,16 @@ public class OdontologistController {
     }
 
     @GetMapping("/lastname/{lastname}")
-    public ResponseEntity<List<Odontologist>> searchByLastname(@PathVariable String lastname){
+    public ResponseEntity<List<Odontologist>> searchByLastname(@PathVariable String lastname) throws ResourceNotFoundException {
         return ResponseEntity.ok(odontologistService.searchByLastname(lastname));
     }
     @GetMapping("/name/{name}")
     public ResponseEntity<List<Odontologist>> findByNameLike(@PathVariable String name){
         return ResponseEntity.ok(odontologistService.findByNameLike(name));
     }
-
+    @PutMapping("/{id_odontologist}/speciality/{id_speciality}")
+    public ResponseEntity<Odontologist> addSpeciality(@PathVariable Integer id_odontologist, @PathVariable Integer id_speciality) throws ResourceNotFoundException {
+       return ResponseEntity.ok(odontologistService.addSpeciality(id_odontologist, id_speciality));
+    }
 
 }

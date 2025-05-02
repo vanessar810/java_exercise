@@ -1,6 +1,7 @@
 package com.dentalclinic.clinic.controller;
 
 import com.dentalclinic.clinic.entity.Patient;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import com.dentalclinic.clinic.service.IPatientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,13 +49,8 @@ public class PatientController {
        }
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletePatient(@PathVariable Integer id){
-        Optional<Patient> patient = patientService.readId(id);
-        if (patient.isPresent()){
+    public ResponseEntity<String> deletePatient(@PathVariable Integer id) throws ResourceNotFoundException {
             patientService.delete(id);
             return ResponseEntity.ok("{\"message\":\"patient deleted\"}");
-        }else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
     }
 }

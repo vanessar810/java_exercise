@@ -1,6 +1,7 @@
 package com.dentalclinic.clinic.service;
 
 import com.dentalclinic.clinic.entity.Patient;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import com.dentalclinic.clinic.repository.IPatientRepository;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +32,13 @@ public class PatientService implements IPatientService{
     }
 
     @Override
-    public void delete(Integer id) {
-        patientRepository.deleteById(id);
+    public void delete(Integer id) throws ResourceNotFoundException {
+        Optional<Patient> patientOptional = readId(id);
+        if (patientOptional.isPresent()){
+            patientRepository.deleteById(id);
+        }
+        else
+            throw new ResourceNotFoundException("{\"message\":\"patient not found\"}");
     }
 
 }

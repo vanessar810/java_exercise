@@ -1,8 +1,5 @@
-package com.dentalclinic.clinic.service;
+package com.dentalclinic.clinic.auth;
 
-import com.dentalclinic.clinic.auth.AuthenticationRequest;
-import com.dentalclinic.clinic.auth.AuthenticationResponse;
-import com.dentalclinic.clinic.auth.RegisterRequest;
 import com.dentalclinic.clinic.configuration.JwtService;
 import com.dentalclinic.clinic.entity.User;
 import com.dentalclinic.clinic.entity.UserRole;
@@ -21,17 +18,19 @@ public class AuthenticationService {
     private final IUserRepository userRepository;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
+
     public AuthenticationResponse register(RegisterRequest request) {
-        User user = User.builder().name(request.getName())
+        User user = User.builder()
+                .name(request.getName())
                 .lastname(request.getLastname())
-                .username(request.getUsername())
+              //  .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .userRole(UserRole.user)
+                .userRole(UserRole.USER)
                 .build();
         userRepository.save(user);
-        String jwtToken = jwtService.generateToken(user);
-        return AuthenticationResponse.builder().jwt(jwtToken).build();
+        String token = jwtService.generateToken(user);
+        return AuthenticationResponse.builder().token(token).build();
     }
 
     public AuthenticationResponse login(AuthenticationRequest request) {
@@ -41,10 +40,11 @@ public class AuthenticationService {
                      request.getPassword()
              )
         );
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
-        String jwtToken = jwtService.generateToken(user);
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("User does not exists"));
+        String token = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
-                .jwt(jwtToken)
+                .token(token)
                 .build();
     }
 }

@@ -7,6 +7,7 @@ import com.dentalclinic.clinic.Dto.response.PatientResponseDto;
 import com.dentalclinic.clinic.entity.Appointment;
 import com.dentalclinic.clinic.entity.Odontologist;
 import com.dentalclinic.clinic.entity.Patient;
+import com.dentalclinic.clinic.exception.ResourceNotFoundException;
 import com.dentalclinic.clinic.repository.IAppointmentRepository;
 import com.dentalclinic.clinic.repository.IOdontologistRepository;
 import com.dentalclinic.clinic.repository.IPatientRepository;
@@ -87,8 +88,12 @@ public class AppointmentService implements IAppointmentService{
     }
 
     @Override
-    public void delete(Integer id) {
-    appointmentRepository.deleteById(id);
+    public void delete(Integer id) throws ResourceNotFoundException {
+        AppointmentResponseDto appointmentOptional = readId(id);
+        if (appointmentOptional != null) {
+            appointmentRepository.deleteById(id);
+        } else
+            throw new ResourceNotFoundException("{\"message\":\"appointment not found\"}");
     }
 
     @Override
