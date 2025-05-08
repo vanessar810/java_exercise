@@ -21,9 +21,14 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(
                         auth ->{
-                            // endpoints que no necesitan autenticacion
+                            // endpoints that does not need authetication
                             auth.requestMatchers("/api/v1/auth/**").permitAll();
                             auth.requestMatchers(HttpMethod.GET, "/odontologist/**").permitAll();
+                            // endpoints swagger
+                            auth.requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll();
+                            auth.requestMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll();
+                            auth.requestMatchers(HttpMethod.GET, "/swagger-ui.html").permitAll();
+
                             // endponints que necesitan algun tipo de rol especifico
                             auth.requestMatchers(HttpMethod.POST,"/odontologist/**").hasAnyAuthority("ADMIN");
                             auth.requestMatchers(HttpMethod.PUT,"/odontologist/**").hasAnyAuthority("ADMIN");
@@ -40,8 +45,9 @@ public class SecurityConfiguration {
                         })
                 .csrf(config -> config.disable())
                 .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider)
                 .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .authenticationProvider(authenticationProvider)
+
                 .build();
     }
 }
