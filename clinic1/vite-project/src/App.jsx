@@ -10,24 +10,32 @@ function App() {
   const [currentPage, setCurrentPage] = React.useState('home');
   const [appointments, setAppointments] = React.useState([]);
   const [patients, setPatients] = React.useState([]);
-   // Main render function
+  // Main render function
   const renderPage = () => {
-    switch(currentPage) {
-      case 'home': return <Home/>;
-      case 'patients': return <Patient/>;
-      case 'appointments': return <Appointments/>;
-      case 'services': return <Services/>;
-      default: return <Home/>;
+    switch (currentPage) {
+      case 'home': return <Home />;
+      case 'patients': return (<Patient
+        patients={patients}
+        setPatients={setPatients}
+      />
+      );
+      case 'appointments': return (<Appointments
+        appointments={appointments}
+        setAppointments={setAppointments}
+      />
+      );
+      case 'services': return <Services />;
+      default: return <Home />;
     }
   };
   return (
-    <div className="min-h-screen bg-gray-500">
-      <Navbar
-      currentPage={currentPage}
-      setCurrentPage={setCurrentPage}
+    <div className="min-h-screen flex flex-col justify-between bg-indigo-200 dark:bg-black">
+      <Navbar currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
       />
-      {renderPage()}
-      
+      <main className="flex-grow">
+        {renderPage()}
+      </main>
       <footer className="bg-gray-800 text-white p-6 mt-8">
         <div className="container mx-auto text-center">
           <p>&copy; 2025 DentalCare Clinic. All rights reserved.</p>
